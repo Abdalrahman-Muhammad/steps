@@ -44,14 +44,14 @@ function App() {
               onClick={decreaseStep}
               disabled={step === 1}
             >
-              Previous
+              <span>👈</span> Previous
             </Button>
             <Button
               style='next'
               onClick={increaseStep}
               disabled={step === messages.length}
             >
-              Next
+              Next <span>👉</span>
             </Button>
           </div>
         </div>
