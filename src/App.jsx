@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Message from './components/Message.jsx';
 import { Number } from './components/Number.jsx';
+import Button from './components/Button.jsx';
 
 const messages = [
   'Learn React ⚛️',
@@ -21,9 +22,9 @@ function App() {
 
   return (
     <>
-      <button className='close' onClick={() => setIsOpen((pre) => !pre)}>
+      <Button style='close' onClick={() => setIsOpen((pre) => !pre)}>
         &times;
-      </button>
+      </Button>
 
       {isOpen && (
         <div className='steps'>
@@ -38,20 +39,20 @@ function App() {
           </div>
           <Message message={messages[step - 1]} step={step} />
           <div className='buttons'>
-            <button
-              className='previous'
+            <Button
+              style='previous'
               onClick={decreaseStep}
               disabled={step === 1}
             >
               Previous
-            </button>
-            <button
-              className='next'
+            </Button>
+            <Button
+              style='next'
               onClick={increaseStep}
               disabled={step === messages.length}
             >
               Next
-            </button>
+            </Button>
           </div>
         </div>
       )}
