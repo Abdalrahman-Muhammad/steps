@@ -1,9 +1,5 @@
-const Message = ({ message, step }) => {
-  return (
-    <p className='message'>
-      Step {step}: {message}
-    </p>
-  );
+const Message = ({ children }) => {
+  return <p className='message'>{children}</p>;
 };
 
 export default Message;

@@ -37,7 +37,9 @@ function App() {
               />
             ))}
           </div>
-          <Message message={messages[step - 1]} step={step} />
+          <Message>
+            Step {step}: {messages[step - 1]}
+          </Message>
           <div className='buttons'>
             <Button
               style='previous'
